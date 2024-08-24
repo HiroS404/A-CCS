@@ -7,6 +7,7 @@ h1{
 
 p {
     font-size: clamp(16px, 2vw, 20px); 
+    
 }
 
 body{
@@ -68,8 +69,8 @@ img{
 .sampleimg {
     display: center,flex;
     gap: 150px;
-    padding-bottom: 10%;
-    padding-top: 10%;
+    padding-bottom:5%;
+    padding-top: 5%;
 
 }
 
@@ -94,7 +95,10 @@ img{
 
    @media (max-width: 600px) {
 
-    
+    p {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
     h1{
         font-family: 'Arial', sans-serif;
             font-size: 12vw;
