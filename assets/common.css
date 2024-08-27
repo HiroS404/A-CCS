@@ -4,6 +4,7 @@ h1 {
 }
 h3{
     font-family: Arial, Helvetica, sans-serif ;
+    color: white;
 }
 p {
   font-size: clamp(16px, 2vw, 20px);
@@ -11,11 +12,25 @@ p {
 
 body {
   text-align: center;
-  background: linear-gradient(to right, rgb(200, 244, 146), rgb(2, 139, 147));
+  background: linear-gradient(to bottom,  #c3d4a3, #2eec2b, #3a9e38);
+
 }
 
 header {
   margin-top: 5%;
+}
+
+footer {
+  margin-right: -9px;
+  margin-left: -9px;
+  margin-bottom: -20px;
+ 
+  background-color: hsl(120, 40%, 16%) ;
+  color: white;
+  position: relative;
+  
+  
+  
 }
 
 .container {
@@ -85,16 +100,16 @@ img {
 
 .copyright {
   font-size: 16px;
-  padding-top: 20px;
+  padding-top: 20px;  
+  padding-bottom: 10px;
+  color: white;
 }
 
-footer {
-    padding: 10px;
-}
+
 
 .fb{
     font-size: 40px; 
-    color:  darkblue; 
+    color:  blue; 
     
     margin-bottom: 20px;
     
@@ -107,6 +122,24 @@ footer {
 }
 
 @media (max-width: 600px) {
+
+  body {
+    text-align:center;
+  }
+
+  .fb{
+    color:  teal; 
+  }
+
+  footer {
+  background-color: black;
+  color: white;
+  position: relative;
+  margin-right: -10px;
+  margin-left: -10px;
+
+    
+  }
   p {
     margin-right: 15px;
     margin-left: 15px;
@@ -247,10 +280,10 @@ footer {
 
 .links {
   text-decoration: none;
-  color: black;
+  color: white;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .links:hover {
-  color: blue;
+  color: darkgreen;
 }
