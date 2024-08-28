@@ -8,11 +8,50 @@
     <title>CS Compass</title>
     <link rel="stylesheet" href="assets/common.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
 
 </head>
 
 <body>
+   
+
+    <nav>
+        <div class="logo"> <img src="assets/images/backgroundRbg.png" alt="logo"></div>
+
+        <div class="toggle"> 
+            <a><ion-icon name="grid-outline"></ion-icon></a>
+        </div>
+        <ul class="menu">
+
+            <li><a href="index.html">Home </a> </li>
+            
+            <li><a href="#footer"> About </a>  </li>
+            
+            <li><a href="#footer"> Facebook </a> </li>
+            
+        </ul>
+        
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(".toggle").on("click", function(){
+                if($(".menu").hasClass("active")){
+                    $(".menu").removeClass("active");
+                    $(this).find("a").html("<ion-icon name='grid-outline'></ion-icon>");
+                } else{
+                    $(".menu").addClass("active");
+                    $(this).find("a").html("<ion-icon name='close-circle-outline'></ion-icon>");
+
+                }
+            })
+        })
+
+    </script>
+    <hr>
+    
 
     <header>
         <div class="container">
@@ -33,12 +72,20 @@
 
             <button class="button" id="driveButton">Download App Here</button>
 
-            <div class="sampleimg">
-
-                <img src="assets/images/sample1.jpg" alt="sample1">
-                <img src="assets/images/sample2.jpg" alt="sample2">
-                <img src="assets/images/sample3.jpg" alt="sample3">
-                <img src="assets/images/sample4.jpg" alt="sample4">
+            <div class="sampleimg snaps">
+                <div class="pics">
+                    <img src="assets/images/sample1.jpg" alt="sample1">
+                </div>
+                <div class="pics">
+                    <img src="assets/images/sample2.jpg" alt="sample2">
+                </div>
+                <div class="pics">
+                    <img src="assets/images/sample3.jpg" alt="sample3">
+                </div>
+                <div class="pics">
+                    <img src="assets/images/sample4.jpg" alt="sample4">
+                </div>
+                
             </div>
 
             <script>
@@ -62,7 +109,7 @@
 
 </body>
 
-<footer>
+<footer id="footer">
     <hr>
     
     

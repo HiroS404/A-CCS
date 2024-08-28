@@ -1,6 +1,73 @@
+html {
+  scroll-behavior: smooth;
+}
+.menu a, a:hover {
+  text-decoration: none;
+}
+
+.logo {
+  width: 200px;
+  height: 150px;
+  margin-top: -32px  ;
+  margin-bottom: -200px;
+  margin-left: -40px;
+
+}
+
+
+
+nav{
+  position: relative;
+  background: #3a9e38;
+  display: flex;
+  margin-right: -9px;
+  margin-left: -9px;
+  margin-top: -20px;
+  /* overflow: hidden; */
+  height: 80px;
+  
+
+
+}
+
+
+nav a{
+  color: white;
+
+}
+
+nav a:hover{
+  color: #2eec2b;
+  font-size: large;
+  border-color: white;
+  border-radius: 5%;
+  border-style: solid;
+}
+
+
+
+.menu {
+  display: flex;
+  list-style: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  
+}
+
+.menu li{
+  padding: 15%;
+  font-size: 16px;
+}
+
+.toggle {
+  font-size: 30px;
+  display: none;
+}
+
 h1 {
   font-family: "Gill Sans Extrabold", sans-serif;
   font-size: 5vw;
+  transition:  1s ease;
+
 }
 h3{
     font-family: Arial, Helvetica, sans-serif ;
@@ -11,9 +78,10 @@ p {
 }
 
 body {
-  text-align: center;
-  background: linear-gradient(to bottom,  #c3d4a3, #2eec2b, #3a9e38);
 
+    background: linear-gradient(to bottom,  #E0FBE2, #BFF6C3, #B0EBB4);
+
+  
 }
 
 header {
@@ -24,16 +92,18 @@ footer {
   margin-right: -9px;
   margin-left: -9px;
   margin-bottom: -20px;
- 
-  background-color: hsl(120, 40%, 16%) ;
+
+  background-color:#365E32 ;
   color: white;
   position: relative;
-  
-  
-  
+  text-align: center;
+  /* display: none; */
+
 }
 
 .container {
+  transition:  1s ease;
+
   background: radial-gradient(
     328px at 2.9% 15%,
     rgb(191, 224, 251) 0%,
@@ -85,9 +155,12 @@ img {
 }
 
 .sampleimg {
-  display: center, flex;
-  gap: 150px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 20%;
+  gap: 50px;
   padding-bottom: 5%;
+  padding-left: 5%;
   padding-top: 5%;
 }
 
@@ -100,7 +173,7 @@ img {
 
 .copyright {
   font-size: 16px;
-  padding-top: 20px;  
+  padding-top: 20px;
   padding-bottom: 10px;
   color: white;
 }
@@ -108,11 +181,11 @@ img {
 
 
 .fb{
-    font-size: 40px; 
-    color:  blue; 
-    
+    font-size: 40px;
+    color:  blue;
+
     margin-bottom: 20px;
-    
+
 }
 
 @media (max-width: 600px) {
@@ -121,24 +194,132 @@ img {
   }
 }
 
-@media (max-width: 600px) {
 
+
+@media screen and (max-width: 600px) {
+
+  nav{
+    display: block;
+    position:relative;
+    padding-top:-5px ;
+    background-color: green;
+    transition:  1s ease;
+    
+  }
+
+  nav a{
+    font: bolder;
+  color:white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  transition: all 1s ease-in-out;
+}
+
+  .logo {
+    position:absolute;
+    width: 200px;
+    height: 150px;
+    margin-top: -33px  ;
+    margin-bottom: -200px;
+    margin-left: -60px;
+    background: transparent;
+    transition:  1s ease;
+
+  }
+
+
+  .menu{
+    margin-top: 15px;
+    display: none;
+    transition: all 1s ease;
+    
+
+   
+  }
+  
+
+  .menu.active, .toggle{
+    position: absolute;
+    text-align: right;
+    width:75%;
+    display:block;
+    z-index: 10;
+    background: green;
+    border-radius: 10%;
+    margin-top: 20%;
+    margin-left: 30%;
+    padding: 0;
+
+    
+    
+    
+
+  }
+
+  .toggle{
+    margin-top: 5px;
+    background: transparent;
+    width: 30px;
+    position: absolute; 
+    top: 20px;
+    right: 20px;
+    padding-top: 12px;
+    transition: all 1s ease;
+
+    
+  }
+
+
+  /* for mobile scrolling */
+  .sampleimg {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 90%;
+    gap: 20px;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain ;
+    padding: 5%;
+  }
+
+  .snaps {
+    scroll-snap-type: inline mandatory;
+  }
+
+  .snaps > * {
+    scroll-snap-align: start;
+  }
+
+  .pics{
+    padding: 5%;
+    background: transparent;
+    border-radius: 15px;
+    display:grid ;
+
+  }
+
+  .pics img{
+    border-radius: 15px;
+    width: 100%;
+
+  }
+
+  /* end mobile scrolling */
+ 
   body {
     text-align:center;
   }
 
   .fb{
-    color:  teal; 
+    color:  teal;
   }
 
   footer {
-  background-color: black;
+  background-color: #365E32;
   color: white;
   position: relative;
   margin-right: -10px;
   margin-left: -10px;
 
-    
+
   }
   p {
     margin-right: 15px;
@@ -198,22 +379,22 @@ img {
   }
 
   .creators {
-    display: block;  
+    display: block;
     padding-bottom: 50px;
-     
+
     }
 
     .links {
-    display: block;       
-    width: 100%;          
-    margin-bottom: -20px;  
+    display: block;
+    width: 100%;
+    margin-bottom: -20px;
     }
 
     .copyright {
         padding-top: 5px;
     }
- 
-  
+
+
 }
 
 
@@ -266,8 +447,8 @@ img {
     margin-bottom: auto;
   }
 
-  
-  
+
+
 }
 
 .creators {
