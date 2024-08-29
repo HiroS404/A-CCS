@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 .menu a, a:hover {
   text-decoration: none;
 }
@@ -11,6 +12,7 @@ html {
   margin-top: -32px  ;
   margin-bottom: -200px;
   margin-left: -40px;
+  animation: rotate 4s ease-in 0s infinite normal none;
 
 }
 
@@ -25,24 +27,33 @@ nav{
   margin-top: -20px;
   /* overflow: hidden; */
   height: 80px;
-  
-
-
 }
 
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
 nav a{
-  color: white;
+color: white;
+font-family: fantasy;
 
 }
 
 nav a:hover{
-  color: #2eec2b;
-  font-size: large;
-  border-color: white;
-  border-radius: 5%;
-  border-style: solid;
+  color: #0fd31c;
+  font-weight: bold;
+  background-color: #0fd31c;
 }
+
+/* .links {
+color: white;
+}
+
+.links:hover {
+  color: greenyellow;
+
+} */
 
 
 
@@ -50,7 +61,6 @@ nav a:hover{
   display: flex;
   list-style: none;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  
 }
 
 .menu li{
@@ -66,7 +76,7 @@ nav a:hover{
 h1 {
   font-family: "Gill Sans Extrabold", sans-serif;
   font-size: 5vw;
-  transition:  1s ease;
+  animation: fadeIn 3s;
 
 }
 h3{
@@ -75,6 +85,8 @@ h3{
 }
 p {
   font-size: clamp(16px, 2vw, 20px);
+  animation: fadeIn 7s;
+
 }
 
 body {
@@ -188,6 +200,23 @@ img {
 
 }
 
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+@keyframes rotate{
+  from{
+    transform: rotate(0);
+
+  }
+  to{
+    transform: rotateY(360deg);
+  }
+}
+
+
 @media (max-width: 600px) {
   .container {
     width: 100%;
@@ -198,12 +227,26 @@ img {
 
 @media screen and (max-width: 600px) {
 
+  img {
+    animation: rotate 3s ease-in 0s 1 normal none;
+
+  }
+
+  .logo {
+    animation: rotate 5s ease-in 3s infinite normal none;
+  }
+
+  h1{
+    animation: fadeIn 3s;
+    /*name duration timing-function delay iteration-count direction fill-mode; */
+  }
+
   nav{
     display: block;
     position:relative;
     padding-top:-5px ;
     background-color: green;
-    transition:  1s ease;
+
     
   }
 
@@ -211,7 +254,7 @@ img {
     font: bolder;
   color:white;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  transition: all 1s ease-in-out;
+
 }
 
   .logo {
@@ -222,7 +265,6 @@ img {
     margin-bottom: -200px;
     margin-left: -60px;
     background: transparent;
-    transition:  1s ease;
 
   }
 
@@ -230,7 +272,7 @@ img {
   .menu{
     margin-top: 15px;
     display: none;
-    transition: all 1s ease;
+
     
 
    
@@ -240,14 +282,17 @@ img {
   .menu.active, .toggle{
     position: absolute;
     text-align: right;
-    width:75%;
+    width:70%;
     display:block;
     z-index: 10;
     background: green;
-    border-radius: 10%;
+    border-top-left-radius:0;
+    border-bottom-left-radius: 10%;
     margin-top: 20%;
     margin-left: 30%;
     padding: 0;
+            /*name duration timing-function delay iteration-count direction fill-mode; */
+
 
     
     
@@ -263,7 +308,11 @@ img {
     top: 20px;
     right: 20px;
     padding-top: 12px;
-    transition: all 1s ease;
+    transform: rotate(220deg);
+    /* animation: rotate 3s 0s 1 normal none; */
+        /*name duration timing-function delay iteration-count direction fill-mode; */
+
+
 
     
   }
