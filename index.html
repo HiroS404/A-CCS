@@ -19,37 +19,46 @@
     <nav>
         <div class="logo"> <img src="assets/images/bilog.png" alt="logo"></div>
 
-        <div class="toggle"> 
-            <a><ion-icon name="grid-outline"></ion-icon></a>
-        </div>
-        <ul class="menu">
+        
+        <ul id="menuList">
 
-            <li class="links"><a href="index.html">Home </a> </li>
+            <li class="links"><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home </a> </li>
             
-            <li class="links"><a href="#footer"> About </a>  </li>
+            <li class="links"><a href="#footer"><ion-icon name="information-circle-outline"></ion-icon> About </a>  </li>
             
-            <li class="links"><a href="#footer"> Facebook </a> </li>
+            <li class="links"><a href="#footer"><ion-icon name="logo-facebook"></ion-icon> Facebook </a> </li>
             
         </ul>
+        <div class="toggle"> 
+            <a><ion-icon name="grid-outline" onclick="toggleMenu()"></ion-icon></a>
+        </div>
         
     </nav>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        $(function(){
-            $(".toggle").on("click", function(){
-                if($(".menu").hasClass("active")){
-                    $(".menu").removeClass("active");
-                    $(this).find("a").html("<ion-icon name='grid-outline'></ion-icon>");
-                } else{
-                    $(".menu").addClass("active");
-                    $(this).find("a").html("<ion-icon name='close-circle-outline'></ion-icon>");
+        let toggle = document.querySelector(".toggle")
+        toggle.innerHTML = "<a><ion-icon name='grid-outline' onclick='toggleMenu()'></ion-icon></a>";
+        let menuList = document.getElementById("menuList")
+        menuList.style.maxHeight = "0px";
 
-                }
-            })
-        })
+        function toggleMenu(){
+            if(menuList.style.maxHeight == "0px")
+            {
+                menuList.style.maxHeight = "300px";
+                toggle.innerHTML = "<a><ion-icon name='close-circle-outline' onclick='toggleMenu()'></ion-icon></a>";
 
+
+            }
+            else{
+                menuList.style.maxHeight = "0px";
+                toggle.innerHTML = "<a><ion-icon name='grid-outline' onclick='toggleMenu()'></ion-icon></a>";
+
+                
+
+            }
+        }
     </script>
+   
     <hr>
     
 

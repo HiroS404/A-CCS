@@ -1,76 +1,82 @@
-html {
+html, body{
   scroll-behavior: smooth;
+  /* width: 100%;
+  height: 100%; */
 }
 
-.menu a, a:hover {
-  text-decoration: none;
-}
 
 .logo {
   width: 200px;
   height: 150px;
-  margin-top: -32px  ;
+  margin-left: -80px;
+  animation: rotateInfi 5s ease-in 1.5s infinite normal none;
+
+  /* margin-top: -32px  ;
   margin-bottom: -200px;
-  margin-left: -40px;
   /* animation: rotate 4s ease-in 0s infinite normal none; */
+
+}
+
+.bigLogo {
+  animation: rotate 2s ease-in-out 0s 1 normal none;
 
 }
 
 
 
+
 nav{
-  position: relative;
-  background: #3a9e38;
+  padding: 10px 30px;
   display: flex;
+  align-items:center;
+  justify-content: space-between;
+  background: #3a9e38;
+  position: relative;
   margin-right: -9px;
   margin-left: -9px;
   margin-top: -20px;
-  /* overflow: hidden; */
-  height: 80px;
+  height: 60px;
+}
+
+nav ul{
+  display: flex;
+  gap: 40px;
+  align-items: center;
+
+}
+
+nav ul li{
+  list-style-type: none;
+  padding-top: 10px;
+}
+
+nav ul li a{
+  display: inline-flex;
+  text-decoration: none;
+  color: white;
+  padding-right: 20%;
+  padding: 20%;
+  border-radius: 12%;
+  margin-right: 10px;
+}
+
+nav ul li a:hover{
+  background-color: green;
+  border-style:outset;
+}
+
+.toggle{
+  display: none;
+}
+
+.toggle ion-icon{
+  font-size: 25px;
+  color: white;
 }
 
 @keyframes fadeIn {
   0% { opacity: 0; }
   100% { opacity: 1; }
-}
-
-nav a{
-color: white;
-font-family: fantasy;
-
-}
-
-nav a:hover{
-  color: #0fd31c;
-  font-weight: bold;
-  background-color: #0fd31c;
-}
-
-.links {
-color: white;
-}
-
-.links:hover {
-  color: greenyellow;
-
-}
-
-
-
-.menu {
-  display: flex;
-  list-style: none;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.menu li{
-  padding: 15%;
-  font-size: 16px;
-}
-
-.toggle {
-  font-size: 30px;
-  display: none;
 }
 
 h1 {
@@ -79,13 +85,18 @@ h1 {
   animation: fadeIn 3s;
 
 }
+
 h3{
     font-family: Arial, Helvetica, sans-serif ;
     color: white;
 }
+
+
+
 p {
-  font-size: clamp(16px, 2vw, 20px);
+  font-size: 18px;
   animation: fadeIn 7s;
+  font-family: "Gill Sans Extrabold", sans-serif;
 
 }
 
@@ -167,22 +178,22 @@ img {
   background-color: darkblue;
 }
 
-.sample img {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 20%;
+
+.sampleimg{
+  display: flex;
   gap: 50px;
-  padding-bottom: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%; 
   padding-left: 5%;
   padding-top: 5%;
 }
-
-.sampleimg img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
+ 
+.sampleimg img{
   border-radius: 15px;
+  
 }
+
+
 
 .copyright {
   font-size: 16px;
@@ -206,6 +217,15 @@ img {
   100% { opacity: 1; }
 }
 
+@keyframes rotateInfi{
+  from{
+    transform: rotate(0);
+
+  }
+  to{
+    transform: rotateY(360deg);
+  }
+}
 
 @keyframes rotate{
   from{
@@ -213,7 +233,7 @@ img {
 
   }
   to{
-    transform: rotateY(360deg);
+    transform: rotateY(1440deg);
   }
 }
 
@@ -228,97 +248,87 @@ img {
 
 @media screen and (max-width: 600px) {
 
-  .bigLogo {
-    animation: rotate 3s ease-in 0s 1 normal none;
-
-  }
-
-  .logo {
-    animation: rotate 5s ease-in 3s infinite normal none;
-  }
-
-  h1{
-    animation: fadeIn 3s;
-    /*name duration timing-function delay iteration-count direction fill-mode; */
-  }
-
-  nav{
-    display: block;
-    position:relative;
-    padding-top:-5px ;
-
-    background-color: green;
 
 
-  }
-
-  nav a{
-    font: bolder;
-  color:white;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
-}
-
-  .logo {
-    position:absolute;
-    width: 200px;
-    height: 150px;
-    margin-top: -33px  ;
-    margin-bottom: -200px;
-    margin-left: -60px;
-    background: transparent;
-
-  }
-
-
-  .menu{
-    margin-top: 15px;
-    display: none;
-
-
-
-
-  }
-
-
-  .menu.active, .toggle{
+  nav ul{
     position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction:column;
     text-align: center;
-    width:70%;
-    display:block;
+    background: #3a9e38;
+    gap: 0;
+    overflow: hidden;
     z-index: 10;
-    background: green;
-    border-top-left-radius:0;
-    border-bottom-left-radius: 10%;
-    margin-top: 20%;
-    margin-left: 30%;
-    padding: 0;
-            /*name duration timing-function delay iteration-count direction fill-mode; */
 
+  }
 
-
-
-
-
+  nav ul li{
+    padding: 25px;
   }
 
   .toggle{
-    margin-top: 5px;
-    background: transparent;
-    width: 30px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding-top: 12px;
-    transform: rotate(220deg);
-    /* animation: rotate 3s 0s 1 normal none; */
-        /*name duration timing-function delay iteration-count direction fill-mode; */
+    display: block;
+  }
+
+  #menuList{
+    transition: all 0.5s;
+  }
 
 
+  
+
+ 
+
+  .logo {
+    animation: rotateInfi 5s ease-in 1.5s infinite normal none;
+    position:relative;
+    margin-left: -90px;
 
 
   }
 
+  .toggle ion-icon{
+    margin-right: -20px;
+    margin-top: 20px;
+    font-size: 35px;
+    /* transform: rotate(40deg); */
+
+
+    
+  }
+
+ 
+
+
+
+  nav ul li{
+    padding-bottom: 50px;
+    padding-top: 10px;
+  }
+  
+  nav ul li a{ 
+    padding: 5%;
+    border-radius: 15px; 
+    display:flex;
+
+    
+  }
+
+  nav ul li a:hover{
+    background-color: green;
+    border-style:ridge;
+    overflow: hidden;
+  }
+
+
+
+  h1{
+    animation: fadeIn 3s;
+
+    /*name duration timing-function delay iteration-count direction fill-mode; */
+  }
 
   /* for mobile scrolling */
   .sampleimg {
@@ -376,6 +386,8 @@ img {
   p {
     margin-right: 15px;
     margin-left: 15px;
+    font-family: "Arial", sans-serif;
+
   }
 
   h1 {
