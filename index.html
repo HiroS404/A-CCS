@@ -14,25 +14,25 @@
 </head>
 
 <body>
-   
+
 
     <nav>
         <div class="logo"> <img src="assets/images/bilog.png" alt="logo"></div>
 
-        
+
         <ul id="menuList">
 
             <li class="links"><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home </a> </li>
-            
-            <li class="links"><a href="#footer"><ion-icon name="information-circle-outline"></ion-icon> About </a>  </li>
-            
+
+            <li class="links"><a href="#footer"><ion-icon name="information-circle-outline"></ion-icon> About </a> </li>
+
             <li class="links"><a href="#footer"><ion-icon name="logo-facebook"></ion-icon> Facebook </a> </li>
-            
+
         </ul>
-        <div class="toggle"> 
+        <div class="toggle">
             <a><ion-icon name="grid-outline" onclick="toggleMenu()"></ion-icon></a>
         </div>
-        
+
     </nav>
 
     <script>
@@ -41,26 +41,25 @@
         let menuList = document.getElementById("menuList")
         menuList.style.maxHeight = "0px";
 
-        function toggleMenu(){
-            if(menuList.style.maxHeight == "0px")
-            {
+        function toggleMenu() {
+            if (menuList.style.maxHeight == "0px") {
                 menuList.style.maxHeight = "300px";
                 toggle.innerHTML = "<a><ion-icon name='close-circle-outline' onclick='toggleMenu()'></ion-icon></a>";
 
 
             }
-            else{
+            else {
                 menuList.style.maxHeight = "0px";
                 toggle.innerHTML = "<a><ion-icon name='grid-outline' onclick='toggleMenu()'></ion-icon></a>";
 
-                
+
 
             }
         }
     </script>
-   
+
     <hr>
-    
+
 
     <header>
         <div class="container">
@@ -94,13 +93,13 @@
                 <div class="pics">
                     <img src="assets/images/sample4.jpg" alt="sample4">
                 </div>
-                
+
             </div>
 
             <script>
                 document.getElementById('driveButton').addEventListener
                     ('click', function () {
-                        window.open('https://drive.google.com/file/d/1sI4tTZeh2NN20lpM4CQ60mgEXVPHK9n4/view?usp=sharing', 'app');
+                        window.open('https://drive.google.com/file/d/1cSBnB7S1ReiuXmMsBNp9sjXhtY30tHxz/view?usp=sharing', 'app');
                     }
                     );
             </script>
@@ -120,24 +119,29 @@
 
 <footer id="footer">
     <hr>
-    
-    
-    
+
+
+
     <h3>Created by: <br>Ternary Vanguards</h3>
     <div class="fb">
         <i class="fa-brands fa-square-facebook"></i>
     </div>
-   
-    
-<div class="creators">   
-    <a href="https://www.facebook.com/francisvince.jaca" class="links" target="_blank" rel="noopener noreferrer">Vince Jaca</a>
-    <a href="https://www.facebook.com/johnriel.sampiano" class="links" target="_blank" rel="noopener noreferrer">Johnriel Sampiano</a>
-    <a href="https://www.facebook.com/M.MikhailACanlas" class="links" target="_blank" rel="noopener noreferrer">Mhar Canlas</a>
-    <a href="https://www.facebook.com/joebertjay.jimena" class="links" target="_blank" rel="noopener noreferrer">Jay Jimena</a>
-    <a href="https://www.facebook.com/azelmaem" class="links" target="_blank" rel="noopener noreferrer">Azel Moquera</a>
-</div>  
-   
-  
+
+
+    <div class="creators">
+        <a href="https://www.facebook.com/francisvince.jaca" class="links" target="_blank"
+            rel="noopener noreferrer">Vince Jaca</a>
+        <a href="https://www.facebook.com/johnriel.sampiano" class="links" target="_blank"
+            rel="noopener noreferrer">Johnriel Sampiano</a>
+        <a href="https://www.facebook.com/M.MikhailACanlas" class="links" target="_blank" rel="noopener noreferrer">Mhar
+            Canlas</a>
+        <a href="https://www.facebook.com/joebertjay.jimena" class="links" target="_blank" rel="noopener noreferrer">Jay
+            Jimena</a>
+        <a href="https://www.facebook.com/azelmaem" class="links" target="_blank" rel="noopener noreferrer">Azel
+            Moquera</a>
+    </div>
+
+
     <p class="copyright">&copy; 2024 CS Compass Project</p>
 
 </footer>
