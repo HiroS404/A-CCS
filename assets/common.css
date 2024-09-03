@@ -30,6 +30,7 @@ html, body{
 }
 #team{
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .team-member {
@@ -80,7 +81,9 @@ font-family:'Times New Roman', Times, serif;
   line-height: 1.5;
   font-family: Arial, Helvetica, sans-serif;
 }
-
+.goals h2{
+  font-family: Arial, Helvetica, sans-serif;
+}
 .goals {
 
 border: 1px solid #ddd;
