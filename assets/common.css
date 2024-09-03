@@ -2,8 +2,131 @@ html, body{
   scroll-behavior: smooth;
   /* width: 100%;
   height: 100%; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+.us{
+  margin-bottom: -60px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}
+.team-dev{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  padding-top: 20px;
+  margin-right:  30px;
+  gap: 25px;
+  margin-left: -500px;
+  margin-bottom: -25px;
+  background:transparent;
+  width: 75%;
+  margin-top: 30px;
+  text-align: center;
+
+}
+#team{
+  text-align: center;
 }
 
+.team-member {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.9);
+  margin-bottom: 10px;
+  padding: 20px;
+  width: 30%;
+  flex: 1 1 calc(33.333% - 1rem); 
+}
+
+.team-member:hover{
+  background-color: #d3d3d3;
+  background-image: linear-gradient(315deg, #d3d3d3 0%, #7bed9f 74%);
+}
+
+.developer {
+  display: flex;
+  padding: 15px;
+  padding-right: 25px;
+  margin-bottom: -10px;
+  background-color:#83b687;
+
+  
+}
+
+
+
+.name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.name a{
+color: black;
+font-family:'Times New Roman', Times, serif;
+
+}
+.role {
+  font-size: 1em;
+  color: #666;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+.description {
+  font-size: 0.9em;
+  line-height: 1.5;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.goals {
+
+border: 1px solid #ddd;
+border-radius: 8px;
+padding: 10px;
+margin-bottom: 20px;
+width: 50%;
+height: 50%;
+
+margin-right: 40%;
+margin-top: 160px;
+padding-left: -20px;
+margin-left: 40px;
+}
+.goals:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+
+}
+.developer h1 {
+  text-align: center;
+font-size: 1.5em;
+margin-bottom: 20px;
+display:none;
+}
+
+.developer h2 {
+  text-align: center;
+font-size: 1.5em;
+}
+
+.goal {
+margin-bottom: 20px;
+}
+.goal-title {
+font-size: 1.2em;
+font-weight: bold;
+color: rgb(11, 63, 11);
+margin-bottom: 20px;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+.goal-description {
+font-size: 1em;
+color: #333;
+font-family: Arial, Helvetica, sans-serif;
+}
 
 .logo {
   width: 200px;
@@ -101,8 +224,8 @@ p {
 }
 
 body {
-
-    background: linear-gradient(to bottom,  #E0FBE2, #BFF6C3, #B0EBB4);
+    width: 100%;
+      background: linear-gradient(to bottom,  #E0FBE2, #BFF6C3, #B0EBB4);
 
 
 }
@@ -135,8 +258,6 @@ footer {
     rgb(234, 251, 251) 77.6%,
     rgb(240, 251, 244) 100.7%
   );
-
-  width: 1000px;
   margin: auto;
   border: 1px solid black;
   border-radius: 15px;
@@ -144,6 +265,7 @@ footer {
   text-align: center;
   position: relative;
   overflow: hidden;
+  width: 90%; 
 }
 
 img {
@@ -248,8 +370,117 @@ img {
 
 @media screen and (max-width: 600px) {
 
+  html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+.team-dev{
+    display: block;
+    padding-top: 10px;
+    margin-left: -15px;
+    margin-bottom: -25px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #6da173;
+    width: 100%;
+    text-align: start;
+    
+}
+  .developer {
+    display: block;
+    max-width: 800px;
+    padding: 15px;
+    padding-top: -5px;
+    margin-right: -15px;
+    padding-right: 25px;
+    margin-bottom: -10px;
+    background-color:#83b687;
+
+    
+}
 
 
+.team-member {
+
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.9);
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 95%;
+}
+.name {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.name a{
+  color: black;
+  font-family:'Times New Roman', Times, serif;
+
+}
+.role {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+.description {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.goals {
+ 
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  padding: 10px;
+  margin-bottom: 70px;
+  width: 95%;
+  margin-left: 3px;
+  margin-top: 70px;
+
+}
+.developer h1 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: -50px;
+  display: block;
+  
+}
+#team{
+  text-align: start;
+}
+
+.us{
+  display: none;
+}
+.goal {
+  margin-bottom: 20px;
+}
+.goal-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgb(11, 63, 11);
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+.goal-description {
+  font-size: 1em;
+  color: #333;
+}
+
+    .copyright {
+        padding-top: 5px;
+    }
+    
+nav{
+  margin-right: -15px;
+}
   nav ul{
     position: absolute;
     top: 60px;
@@ -262,10 +493,12 @@ img {
     overflow: hidden;
     z-index: 10;
 
+
   }
 
   nav ul li{
     padding: 25px;
+    
   }
 
   .toggle{
@@ -274,6 +507,14 @@ img {
 
   #menuList{
     transition: all 0.5s;
+  }
+
+  #menuList ion-icon{
+    font-size: 25px;
+  } 
+
+  #menuList .links{
+    padding: 10px ;
   }
 
 
@@ -293,7 +534,6 @@ img {
     margin-right: -20px;
     margin-top: 20px;
     font-size: 35px;
-    /* transform: rotate(40deg); */
 
 
     
@@ -330,11 +570,18 @@ img {
     /*name duration timing-function delay iteration-count direction fill-mode; */
   }
 
+
+  .container {
+    width: 97%; 
+    margin-left: 10px;
+  }
+
   /* for mobile scrolling */
+
   .sampleimg {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: 90%;
+    grid-auto-columns: 94%;
     gap: 20px;
     overflow-x: auto;
     overscroll-behavior-inline: contain ;
@@ -360,14 +607,15 @@ img {
 
   .pics img{
     border-radius: 15px;
-    width: 100%;
 
   }
 
   /* end mobile scrolling */
 
   body {
-    text-align:center;
+    width: 100%;
+    height: 100%;
+    background: white;
   }
 
   .fb{
@@ -375,10 +623,10 @@ img {
   }
 
   footer {
-  background-color: #365E32;
+  background-color: #334e31;
   color: white;
   position: relative;
-  margin-right: -10px;
+  margin-right: -15px;
   margin-left: -10px;
 
 
@@ -442,21 +690,7 @@ img {
     margin-bottom: auto;
   }
 
-  .creators {
-    display: block;
-    padding-bottom: 50px;
-
-    }
-
-    .links {
-    display: block;
-    width: 100%;
-    margin-bottom: -20px;
-    }
-
-    .copyright {
-        padding-top: 5px;
-    }
+  
 
 
 }
@@ -515,13 +749,7 @@ img {
 
 }
 
-.creators {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-}
+
 
 .links {
   text-decoration: none;
