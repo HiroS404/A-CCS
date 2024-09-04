@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/homestyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 
-    <title>CS Compass</title>
-    <link rel="stylesheet" href="assets/common.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 
 
+    <title>HomePage</title>
 </head>
 
 <body>
-
-
+    
     <nav>
-        <div class="logo"> <img src="assets/images/bilog.png" alt="logo"></div>
-
+        <div class="logo"><img src="assets/images/bilog.png" alt="logo"></div>
+        <p class="comp"><strong>CS Compass</strong></p>
 
         <ul id="menuList">
+            
 
             <li class="links"><a href="index.html"><ion-icon name="home-outline"></ion-icon> Home </a> </li>
 
-            <li class="links"><a href="#aboutUs"><ion-icon name="information-circle-outline"></ion-icon> About </a> </li>
+            <li class="links"><a href="download.html"><ion-icon name="information-circle-outline"></ion-icon> download </a> </li>
 
-            <li class="links"><a href="#team"><ion-icon name="logo-facebook"></ion-icon> Facebook </a> </li>
+            <li class="links"><a href="aboutus.html"><ion-icon name="logo-facebook"></ion-icon> About Us </a> </li>
 
         </ul>
         <div class="toggle">
@@ -51,154 +51,118 @@
             else {
                 menuList.style.maxHeight = "0px";
                 toggle.innerHTML = "<a><ion-icon name='grid-outline' onclick='toggleMenu()'></ion-icon></a>";
-
-
-
             }
         }
     </script>
 
-    <hr>
-
-
-    <header>
-        <div class="container">
-            <img class="bigLogo" src="assets/images/backgroundRbg.png" alt="compass logo">
-
-            <div class="txt">
-                <h1>Welcome To CS Compass</h1>
-            </div>
-            <p>Hello students of CCS, we the CS Compass have created this app so that you won't have to wonder for
-                information.
-                <br>
-                This app will let you know of the latest announcements within the CCS, the new events being displayed in
-                our
-                <br>
-                calendar
-                and you'll also get to know the members of the council.<br>
+    <div class="first">
+        <img class="bigLogo" src="assets/images/backgroundRbg.png" alt="compass logo">
+        
+        <div class="f1">
+            <h1>
+                Welcome to CS Compass!
+            </h1>
+            <p>
+                Your ultimate tool for staying updated with CCS.
             </p>
 
-            <button class="button" id="driveButton">Download App Here</button>
-
-            <div class="sampleimg snaps">
-                <div class="pics">
-                    <img src="assets/images/sample1.jpg" alt="sample1">
-                </div>
-                <div class="pics">
-                    <img src="assets/images/sample2.jpg" alt="sample2">
-                </div>
-                <div class="pics">
-                    <img src="assets/images/sample3.jpg" alt="sample3">
-                </div>
-                <div class="pics">
-                    <img src="assets/images/sample4.jpg" alt="sample4">
-                </div>
-
+            <div class="p2">
+                <h2>
+                    Download the app to get:
+                </h2>
+               <div class="p">
+                - Timely Announcements <br>
+                - Upcoming Events <br>
+                - Council Member Information
+               </div>
+                
+                
             </div>
-
-            <script>
-                document.getElementById('driveButton').addEventListener
-                    ('click', function () {
-                        window.open('https://drive.google.com/file/d/1cSBnB7S1ReiuXmMsBNp9sjXhtY30tHxz/view?usp=sharing', 'app');
-                    }
-                    );
-            </script>
-
-
-
         </div>
-
-
-
-
-    </header>
-    <br>
-    <br>
-    <div class="us" id="aboutUs">
-        <h1>About Us</h1>
-
     </div>
-    <div id="about" class="developer">
-        
-        <h1>About Us</h1>
 
-        <div class="goals">
-            <h2>Goals of the CS Compass App</h2>
-            <div class="goal">
-                <div class="goal-title">Provide Timely Announcements</div>
-                <div class="goal-description">Keep CCS students informed with the latest updates and announcements from the council, ensuring that no important information is missed.</div>
-            </div>
-            <div class="goal">
-                <div class="goal-title">Display Upcoming Events</div>
-                <div class="goal-description">Offer an organized calendar of events so that students can easily view and keep track of upcoming activities and important dates within CCS.</div>
-            </div>
-            <div class="goal">
-                <div class="goal-title">Introduce Council Members</div>
-                <div class="goal-description">Allow students to get to know the members of the council, fostering a sense of connection and transparency within the school community.</div>
-            </div>
+    <div class="second">
+        <h1 class="f2">
+            Why Download CS Compass?
+        </h1>
+        
+        <div class="para">
+            <p>
+                <strong>1. Timely Announcements</strong> <br><br>
+                <em>Get the latest updates from CCS instantly.</em>
+            </p>
+
+            <img src="assets/images/sample4.jpg" alt="sample4">
         </div>
 
-        <div class="team-dev"> 
-            <h2 id="team">
-            The Team Behind the Project: The Ternary Vanguards
+        <div class="para2">
+            <p>
+                <strong>2. Upcoming Events</strong> <br><br>
+                <em>Easily track and manage all CCS activities. </em>
+            </p>
+            <img src="assets/images/sample3.jpg" alt="sample3">
+        </div>
+
+        <div class="para3">
+            <p>
+                <strong>3. Meet the Council</strong> <br><br>
+                <em>Connect with and learn about the CCS council members.</em>
+            </p>
+            <img src="assets/images/sample2.jpg" alt="sample2">
+
+        </div>
+    </div>
+
+    <div class="third">
+        <h1>
+            Getting Started is Easy!
+        </h1>
+
+        <h2>
+           <em>Simply click the download button below to get the CS Compass app on your device.</em> 
         </h2>
-        <div class="team-member">
-            
-            <div class="name"><a href="https://www.facebook.com/francisvince.jaca" class="links" target="_blank"
-                rel="noopener noreferrer">Vince Jaca</a></div>
-            <div class="role">Lead Developer</div>
-            <div class="description">Innovator and problem-solver, brings cutting-edge solutions to our projects with a passion for technology.</div>
+
+        <div class="dlbtn">
+            <div class="btn1">
+                <a href="download.html" class="buttonh"><ion-icon name="logo-android"></ion-icon> Download for Android</a>
+
+            </div>
+            <div class="btn1">
+                <br><a href="https://www.google.com/search?q=appple+coming+soon&sca_esv=c9a915b7e2353e00&udm=2&biw=1366&bih=607&sxsrf=ADLYWIKc13Kbj7wusBwBg2btoM3NlXt_cA%3A1725471319033&ei=V5rYZpfbAaXn2roPrYui0Q4&ved=0ahUKEwjX4qnI6amIAxWls1YBHa2FKOoQ4dUDCBE&uact=5&oq=appple+coming+soon&gs_lp=Egxnd3Mtd2l6LXNlcnAiEmFwcHBsZSBjb21pbmcgc29vbkiAElCnB1juDXABeACQAQCYAeUBoAHKCKoBBTAuNi4xuAEDyAEA-AEBmAICoALGAcICBBAjGCfCAgoQABiABBhDGIoFwgIGEAAYBxgemAMAiAYBkgcDMS4xoAfwEg&sclient=gws-wiz-serp#vhid=cfspaosPiHxa4M&vssid=mosaic" class="buttonh"><ion-icon name="logo-apple"></ion-icon> iOS coming soon</a>
+
+            </div>
         </div>
         
-        <div class="team-member">
-            <div class="name"><a href="https://www.facebook.com/johnriel.sampiano" class="links" target="_blank"
-                rel="noopener noreferrer">Johnriel Sampiano</a></div>
-            <div class="role">Lead UI Developer</div>
-            <div class="description">crafts intuitive and beautiful interfaces, ensuring a seamless user experience from start to finish.</div>
-        </div>
-        
-        <div class="team-member">
-            <div class="name"><a href="https://www.facebook.com/joebertjay.jimena" class="links" target="_blank" rel="noopener noreferrer">Jay Joebert
-                Jimena</a></div>
-            <div class="role">Lead Graphic Designer</div>
-            <div class="description">With a strong design instinct, creates visually captivating graphics that enhance and define our project’s identity.</div>
-        </div>
-        
-        <div class="team-member">
-            <div class="name"><a href="https://www.facebook.com/M.MikhailACanlas" class="links" target="_blank" rel="noopener noreferrer">Mhar Mikhail
-                Canlas</a></div>
-            <div class="role">Co-Lead Graphic Designer</div>
-            <div class="description">collaborates on stunning designs, contributing creativity and detail to our visual projects.</div>
-        </div>
-        
-        <div class="team-member">
-            <div class="name"><a href="https://www.facebook.com/azelmaem" class="links" target="_blank" rel="noopener noreferrer">Azel Mae
-                Moquera</a></div>
-            <div class="role">Co-Lead UI Developer</div>
-            <div class="description">partners in developing user interfaces that are both functional and aesthetically pleasing.</div>
-        </div>
-        
-        <div class="team-member">
-            <div class="name"><a href="https://www.facebook.com/rizal.papas?mibextid=ZbWKwL" class="links" target="_blank" rel="noopener noreferrer">Rizal Papas</a></div>
-            <div class="role">Lead Web Administrator</div>
-            <div class="description">manages our web presence with expertise, ensuring everything runs smoothly and efficiently.</div>
-        </div></div>
         
     </div>
+
+    <div class="last">
+        <h2>Quick Links</h2>
+        <div class="quick">
+            <ul>
+                <li><a href="aboutus.html">about us</a></li>
+                <li><a href="aboutus.html">Goals</a></li>
+                <li><a href="aboutus.html">our Team</a></li>
+            </ul>
+            <div class="p">
+                <em><strong>App</strong></em> 
+
+            </div>
+            <ul>
+                <li><a href="download.html">Download for Android</a></li>
+                <li><a href="https://www.google.com/search?q=appple+coming+soon&sca_esv=c9a915b7e2353e00&udm=2&biw=1366&bih=607&sxsrf=ADLYWIKc13Kbj7wusBwBg2btoM3NlXt_cA%3A1725471319033&ei=V5rYZpfbAaXn2roPrYui0Q4&ved=0ahUKEwjX4qnI6amIAxWls1YBHa2FKOoQ4dUDCBE&uact=5&oq=appple+coming+soon&gs_lp=Egxnd3Mtd2l6LXNlcnAiEmFwcHBsZSBjb21pbmcgc29vbkiAElCnB1juDXABeACQAQCYAeUBoAHKCKoBBTAuNi4xuAEDyAEA-AEBmAICoALGAcICBBAjGCfCAgoQABiABBhDGIoFwgIGEAAYBxgemAMAiAYBkgcDMS4xoAfwEg&sclient=gws-wiz-serp#vhid=cfspaosPiHxa4M&vssid=mosaic">Download for iOS</li>
+                <li><a href="aboutus.html">Socials</a></li>
+            </ul>
+        </div>
+    </div>
+           
+        
    
 
 </body>
-
 <footer id="footer">
     <hr>
-
-
-
-    
-
-
     <p class="copyright">&copy; 2024 CS Compass Project</p>
 
 </footer>
-
 </html>
